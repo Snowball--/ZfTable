@@ -158,6 +158,7 @@ class Render extends AbstractCommon
         $view->setVariable('showPagination', $tableConfig->getShowPagination());
         $view->setVariable('showItemPerPage', $tableConfig->getShowItemPerPage());
         $view->setVariable('showExportToCSV', $tableConfig->getShowExportToCSV());
+        $view->setVariable('totalItemCount', $this->getTable()->getData()->getTotalItemCount());
 
         return $this->getRenderer()->render($view);
     }
